@@ -1,10 +1,7 @@
-
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from VIPMUSIC import app as Bot
-
-
 
 
 @Bot.on_callback_query(filters.regex("^qz$"))
@@ -14,6 +11,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_qz),
         disable_web_page_preview=True,
     )
+
 
 text_quo = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Qᴜᴏᴛᴇ:
@@ -38,6 +36,8 @@ buttons_quo = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^quo$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -45,6 +45,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_quo),
         disable_web_page_preview=True,
     )
+
 
 text_rd = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Radio:
@@ -57,6 +58,8 @@ buttons_rd = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^rd$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -64,6 +67,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_rd),
         disable_web_page_preview=True,
     )
+
 
 text_rsm = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Resume:
@@ -85,6 +89,8 @@ buttons_rsm = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^rsm$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
