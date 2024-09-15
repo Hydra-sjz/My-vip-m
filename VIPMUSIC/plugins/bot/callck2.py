@@ -89,6 +89,7 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 text_rep = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Rᴇᴘᴏ:
 
@@ -113,6 +114,8 @@ buttons_rep = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^rep$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -120,6 +123,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_rep),
         disable_web_page_preview=True,
     )
+
 
 text_rpd = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Speed:
@@ -145,6 +149,8 @@ buttons_rpd = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^rpd$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -152,6 +158,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_rpd),
         disable_web_page_preview=True,
     )
+
 
 text_tag = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Sɪɴɢʟᴇ Tᴀɢ:
@@ -178,6 +185,8 @@ buttons_tag = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^tag$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
