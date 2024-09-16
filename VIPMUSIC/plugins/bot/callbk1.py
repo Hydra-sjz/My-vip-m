@@ -190,9 +190,9 @@ BUTTONS_HP4 = [
         InlineKeyboardButton("Tʀᴜᴛʜ", callback_data="trt"),
     ],
     [
-        InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
-        InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
-        InlineKeyboardButton("Deᴠ", callback_data="dv"),
+        InlineKeyboardButton("Tᴀɢᴀʟʟ", callback_data="tgl"),
+        InlineKeyboardButton("Tᴇʟᴇɢʀᴀᴘʜ", callback_data="tgr"),
+        InlineKeyboardButton("Tᴛs", callback_data="tt"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings3"),
