@@ -218,24 +218,24 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP5 = [
     [
-        InlineKeyboardButton("Acᴛɪᴠᴇ", callback_data="act"),
-        InlineKeyboardButton("Adᴍɪɴ", callback_data="adm"),
-        InlineKeyboardButton("Auᴛʜ", callback_data="aut"),
+        InlineKeyboardButton("Usᴇʀ Iɴғᴏ", callback_data="ui"),
+        InlineKeyboardButton("Usᴇʀɪᴅ", callback_data="ud"),
+        InlineKeyboardButton("Wʀɪᴛᴇ", callback_data="wr"),
     ],
     [
-        InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="adv"),
-        InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
-        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
+        InlineKeyboardButton("Wʜᴏɪs", callback_data="wh"),
+        InlineKeyboardButton("Wᴀʟʟ", callback_data="wl"),
+        InlineKeyboardButton("Wᴇʙᴅʟ", callback_data="wd"),
     ],
     [
-        InlineKeyboardButton("Boᴛ", callback_data="bt"),
-        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
+        InlineKeyboardButton("Yᴛʜᴜᴍʙ", callback_data="yh"),
+        InlineKeyboardButton("Zᴏᴍʙɪᴇs", callback_data="zm"),
+        InlineKeyboardButton("...", callback_data=""),
     ],
     [
-        InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
-        InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
-        InlineKeyboardButton("Deᴠ", callback_data="dv"),
+        InlineKeyboardButton("...", callback_data=""),
+        InlineKeyboardButton("...", callback_data=""),
+        InlineKeyboardButton("...", callback_data=""),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings4"),
