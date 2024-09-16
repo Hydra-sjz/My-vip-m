@@ -401,6 +401,7 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 text_ud = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Usᴇʀɪᴅ:
 
@@ -437,6 +438,8 @@ buttons_ud = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^ud$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -444,6 +447,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_ud),
         disable_web_page_preview=True,
     )
+
 
 text_wr = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wʀɪᴛᴇ:
@@ -466,6 +470,8 @@ buttons_wr = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^wr$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -473,6 +479,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_wr),
         disable_web_page_preview=True,
     )
+
 
 text_wh = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wʜᴏɪs:
@@ -497,6 +504,8 @@ buttons_wh = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^wh$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -504,6 +513,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_wh),
         disable_web_page_preview=True,
     )
+
 
 text_wl = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wᴀʟʟ:
@@ -516,6 +526,8 @@ buttons_wl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^wl$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -523,6 +535,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_wl),
         disable_web_page_preview=True,
     )
+
 
 text_wd = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wᴇʙᴅʟ:
@@ -547,6 +560,8 @@ buttons_wd = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^wd$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -554,6 +569,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_wd),
         disable_web_page_preview=True,
     )
+
 
 text_yh = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Yᴛʜᴜᴍʙ:
@@ -583,6 +599,8 @@ buttons_yh = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^yh$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -590,6 +608,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_yh),
         disable_web_page_preview=True,
     )
+
 
 text_zm = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Zᴏᴍʙɪᴇs:
@@ -612,10 +631,12 @@ buttons_zm = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^zm$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
         text=text_zm,
         reply_markup=InlineKeyboardMarkup(buttons_zm),
         disable_web_page_preview=True,
-)
+    )
