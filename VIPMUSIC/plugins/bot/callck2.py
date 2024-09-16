@@ -400,3 +400,222 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_ui),
         disable_web_page_preview=True,
     )
+
+text_ud = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Usᴇʀɪᴅ:
+
+1.々 /me
+Dᴇsᴄʀɪᴘᴛɪᴏɴ:
+Gᴇᴛ ʏᴏᴜʀ ᴀɴᴅ ʀᴇᴘɪᴇᴅ ᴜsᴇʀ's IDs ᴀᴏɴɢ ᴡɪᴛʜ ᴄʜᴀᴛ ID.
+
+Usᴀɢᴇ:
+々 /me [ʀᴇᴘʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]
+
+Dᴇᴛᴀɪs:
+- Rᴇᴛʀɪᴇᴠᴇs ʏᴏᴜʀ Tᴇᴇɢʀᴀᴍ ID ᴀɴᴅ ᴛʜᴇ ID ᴏғ ᴛʜᴇ ᴜsᴇʀ ʏᴏᴜ ʀᴇᴘɪᴇᴅ ᴛᴏ.
+- Asᴏ ᴘʀᴏᴠɪᴅᴇs ᴛʜᴇ ID ᴏғ ᴛʜᴇ ᴄʜᴀᴛ ᴡʜᴇʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɪs ᴜsᴇᴅ.
+
+2.々 /id [ᴜsᴇʀɴᴀᴍᴇ/ID]
+Dᴇsᴄʀɪᴘᴛɪᴏɴ:
+Gᴇᴛ ᴍᴇssᴀɢᴇ ID, ʏᴏᴜʀ ID, ᴜsᴇʀ's ID (ɪғ ᴘʀᴏᴠɪᴅᴇᴅ), ᴀɴᴅ ᴄʜᴀᴛ ID.
+
+Usᴀɢᴇ:
+々/id [ᴜsᴇʀɴᴀᴍᴇ/ID]
+
+Dᴇᴛᴀɪs:
+- Rᴇᴛʀɪᴇᴠᴇs ᴛʜᴇ ID ᴏғ ᴛʜᴇ ᴍᴇssᴀɢᴇ, ʏᴏᴜʀ Tᴇᴇɢʀᴀᴍ ID, ᴀɴᴅ ᴛʜᴇ ᴄʜᴀᴛ's ID.
+- Iғ ᴀ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ID ɪs ᴘʀᴏᴠɪᴅᴇᴅ, ᴀsᴏ ʀᴇᴛʀɪᴇᴠᴇs ᴛʜᴇ ID ᴏғ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ᴜsᴇʀ.
+- Aᴅᴅɪᴛɪᴏɴᴀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ sᴜᴄʜ ᴀs ʀᴇᴘɪᴇᴅ ᴍᴇssᴀɢᴇ ID ᴀɴᴅ ᴄʜᴀᴛ ID ɪs ᴘʀᴏᴠɪᴅᴇᴅ ɪғ ᴀᴘᴘɪᴄᴀʙᴇ.
+
+Exᴀᴍᴘᴇs:
+々 /id ᴜsᴇʀɴᴀᴍᴇ
+々 /id 123456789
+"""
+buttons_ud = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^ud$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_ud,
+        reply_markup=InlineKeyboardMarkup(buttons_ud),
+        disable_web_page_preview=True,
+    )
+
+text_wr = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wʀɪᴛᴇ:
+
+COMMANDS:
+々 /write: ᴡʀɪᴛᴇ ᴛᴇxᴛ ᴏɴ ᴀɴ ᴄʟᴏᴜᴅ ᴀɴᴅ ɢᴇᴛ ᴀɴ ᴇᴅɪᴛᴇᴅ ᴘʜᴏᴛᴏ.
+
+INFO:
+- ᴍᴏᴅᴜʟᴇ ɴᴀᴍᴇ: ᴡʀɪᴛᴇ
+- ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: ᴡʀɪᴛᴇ ᴛᴇxᴛ ᴏɴ ᴀɴ ᴄʟᴏᴜᴅ ᴀɴᴅ ɢᴇᴛ ᴀɴ ᴇᴅɪᴛᴇᴅ ᴘʜᴏᴛᴏ.
+- ᴄᴏᴍᴍᴀɴᴅs: /write
+- ᴘᴇʀᴍɪssɪᴏɴs ɴᴇᴇᴅᴇᴅ: ɴᴏɴᴇ
+
+NOTE:
+- ᴜsᴇ ᴅɪʀᴇᴄᴛʟʏ ɪɴ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ ғᴏʀ ᴛʜᴇ ʙᴇsᴛ ʀᴇsᴜʟᴛs.
+"""
+buttons_wr = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^wr$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_wr,
+        reply_markup=InlineKeyboardMarkup(buttons_wr),
+        disable_web_page_preview=True,
+    )
+
+text_wh = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wʜᴏɪs:
+
+ᴄᴏᴍᴍᴀɴᴅ:
+
+々 /whois - ᴄʜᴇᴄᴋ ᴜsᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.
+
+ɪɴғᴏ:
+
+- ᴛʜɪs ʙᴏᴛ ᴘʀᴏᴠɪᴅᴇs ᴀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴄʜᴇᴄᴋ ᴜsᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.
+- ᴜsᴇ /whois ᴄᴏᴍᴍᴀɴᴅ ғᴏʟʟᴏᴡᴇᴅ ʙʏ ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ᴀ ᴜsᴇʀ ɪᴅ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴛʜᴇ ᴜsᴇʀ.
+
+ɴᴏᴛᴇ:
+
+- ᴛʜᴇ /whois ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴛᴏ ʀᴇᴛʀɪᴇᴠᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+- ᴛʜᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ɪɴᴄʟᴜᴅᴇs ᴜsᴇʀ ɪᴅ, ғɪʀsᴛ ɴᴀᴍᴇ, ʟᴀsᴛ ɴᴀᴍᴇ, ᴜsᴇʀɴᴀᴍᴇ, ᴀɴᴅ ʟᴀsᴛ sᴇᴇɴ sᴛᴀᴛᴜs.
+"""
+buttons_wh = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^wh$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_wh,
+        reply_markup=InlineKeyboardMarkup(buttons_wh),
+        disable_web_page_preview=True,
+    )
+
+text_wl = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wᴀʟʟ:
+
+々 Use /wallpapers To Get random Wallpapers
+"""
+buttons_wl = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^wl$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_wl,
+        reply_markup=InlineKeyboardMarkup(buttons_wl),
+        disable_web_page_preview=True,
+    )
+
+text_wd = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Wᴇʙᴅʟ:
+
+ᴄᴏᴍᴍᴀɴᴅ:
+
+々 /webdl - ᴅᴏᴡɴʟᴏᴀᴅ ᴡᴇʙsɪᴛᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.
+
+ɪɴғᴏ:
+
+- ᴛʜɪs ʙᴏᴛ ᴘʀᴏᴠɪᴅᴇs ᴀ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴏғ ᴀ ᴡᴇʙsɪᴛᴇ.
+- ᴜsᴇ /webdl ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ ᴀ ᴜʀʟ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴏғ ᴛʜᴇ ᴡᴇʙsɪᴛᴇ.
+
+ɴᴏᴛᴇ:
+
+- ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴡᴇʙsɪᴛᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.
+- ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴡɪʟʟ ʙᴇ sᴀᴠᴇᴅ ᴀs ᴀ ᴅᴏᴄᴜᴍᴇɴᴛ ᴀɴᴅ sᴇɴᴛ ᴀs ᴀ ᴅᴏᴄᴜᴍᴇɴᴛ ᴛᴏ ᴛʜᴇ ᴄʜᴀᴛ.
+"""
+buttons_wd = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^wd$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_wd,
+        reply_markup=InlineKeyboardMarkup(buttons_wd),
+        disable_web_page_preview=True,
+    )
+
+text_yh = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Yᴛʜᴜᴍʙ:
+
+ʏᴏᴜᴛᴜʙᴇ ᴛʜᴜᴍʙɴᴀɪʟ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs
+
+ᴜsᴇ ᴛʜᴇsᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ ғʀᴏᴍ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ:
+
+々 /getthumb <ʏᴏᴜᴛᴜʙᴇ_ᴜʀʟ>: ɢᴇᴛ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ ғᴏʀ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ.
+
+々 /genthumb <ʏᴏᴜᴛᴜʙᴇ_ᴜʀʟ>: sᴀᴍᴇ ᴀs /getthumb.
+
+々 /thumb <ʏᴏᴜᴛᴜʙᴇ_ᴜʀʟ>: sᴀᴍᴇ ᴀs /getthumb.
+
+々 /thumbnail <ʏᴏᴜᴛᴜʙᴇ_ᴜʀʟ>: sᴀᴍᴇ ᴀs /getthumb.
+
+
+ᴇxᴀᴍᴘʟᴇ:
+々 /getthumb https://www.youtube.com/watch?v=Tl4bQBfOtbg
+
+ɴᴏᴛᴇ:
+ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ʏᴏᴜᴛᴜʙᴇ ᴜʀʟ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ.
+"""
+buttons_yh = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^yh$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_yh,
+        reply_markup=InlineKeyboardMarkup(buttons_yh),
+        disable_web_page_preview=True,
+    )
+
+text_zm = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Zᴏᴍʙɪᴇs:
+
+commands:
+々 /zombies: ʀᴇᴍᴏᴠᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
+
+info:
+- ᴍᴏᴅᴜʟᴇ ɴᴀᴍᴇ: ʀᴇᴍᴏᴠᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs
+- ᴅᴇsᴄʀɪᴘᴛɪᴏɴ: ʀᴇᴍᴏᴠᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
+- ᴄᴏᴍᴍᴀɴᴅs: /zombies
+- ᴘᴇʀᴍɪssɪᴏɴs ɴᴇᴇᴅᴇᴅ: ᴄᴀɴ ʀᴇsᴛʀɪᴄᴛ ᴍᴇᴍʙᴇʀs
+
+note:
+- ᴜsᴇ ᴅɪʀᴇᴄᴛʟʏ ɪɴ ᴀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ᴡɪᴛʜ ᴍᴇ ғᴏʀ ʙᴇsᴛ ᴇғғᴇᴄᴛ. ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.
+"""
+buttons_zm = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^zm$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_zm,
+        reply_markup=InlineKeyboardMarkup(buttons_zm),
+        disable_web_page_preview=True,
+)
