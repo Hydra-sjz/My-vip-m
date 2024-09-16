@@ -168,12 +168,12 @@ Tᴀɢ A Usᴇʀs Oɴᴇ Bʏ Oɴᴇ
 Tʜɪs ᴍᴏᴅᴜᴇ ᴀᴏᴡs ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀ ᴍᴇᴍʙᴇʀs ɪɴ ᴀ ɢʀᴏᴜᴘ ᴏʀ VC.
 
 Cᴏᴍᴍᴀɴᴅs:
-- /tag: Mᴇɴᴛɪᴏɴ ᴀ ᴍᴇᴍʙᴇʀs ᴏɴᴇ ʙʏ ᴏɴᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-- /vctag: Mᴇɴᴛɪᴏɴ ᴀ ᴍᴇᴍʙᴇʀs ᴏɴᴇ ʙʏ ᴏɴᴇ ғᴏʀ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
+々 /tag: Mᴇɴᴛɪᴏɴ ᴀ ᴍᴇᴍʙᴇʀs ᴏɴᴇ ʙʏ ᴏɴᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+々 /vctag: Mᴇɴᴛɪᴏɴ ᴀ ᴍᴇᴍʙᴇʀs ᴏɴᴇ ʙʏ ᴏɴᴇ ғᴏʀ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
 
 Tᴏ sᴛᴏᴘ ᴛᴀɢɢɪɴɢ:
-- /stoptag: Sᴛᴏᴘ ᴍᴇɴᴛɪᴏɴɪɴɢ ᴀ ᴍᴇᴍʙᴇʀs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-- /stopvctag: Sᴛᴏᴘ ᴍᴇɴᴛɪᴏɴɪɴɢ ᴀ ᴍᴇᴍʙᴇʀs ɪɴ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
+々 /stoptag: Sᴛᴏᴘ ᴍᴇɴᴛɪᴏɴɪɴɢ ᴀ ᴍᴇᴍʙᴇʀs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
+々 /stopvctag: Sᴛᴏᴘ ᴍᴇɴᴛɪᴏɴɪɴɢ ᴀ ᴍᴇᴍʙᴇʀs ɪɴ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
 
 Nᴏᴛᴇ:
 - Oɴʏ ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇsᴇ ᴄᴏᴍᴍᴀɴᴅs.
@@ -192,5 +192,170 @@ async def abot_cb_handler(bot, query):
     await query.message.edit(
         text=text_tag,
         reply_markup=InlineKeyboardMarkup(buttons_tag),
+        disable_web_page_preview=True,
+    )
+
+text_sl = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Sʟᴀᴘ:
+
+Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
+々 /slap: Sʟᴀᴘs sᴏᴍᴇᴏɴᴇ. Iғ ᴜsᴇᴅ ᴀs ᴀ ʀᴇᴘʟʏ, sʟᴀᴘs ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴜsᴇʀ.
+"""
+buttons_sl = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^sl$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_sl,
+        reply_markup=InlineKeyboardMarkup(buttons_sl),
+        disable_web_page_preview=True,
+    )
+
+text_stk = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Sᴛɪᴄᴋᴇʀ:
+
+COMMANDS:
+
+々 /stickerid - ɢᴇᴛs ᴛʜᴇ ғɪʟᴇ ɪᴅ ᴏғ ᴀɴʏ ʀᴇᴘʟɪᴇᴅ sᴛɪᴄᴋᴇʀ.
+々 /getsticker - ɢᴇᴛs ᴛʜᴇ ɪᴍᴀɢᴇ ᴏғ ᴀɴʏ ʀᴇᴘʟɪᴇᴅ sᴛɪᴄᴋᴇʀ.
+々 /kang - ᴋᴀɴɢs ᴀɴʏ sᴛɪᴄᴋᴇʀ ɪɴ ᴛʜᴇ ʏᴏᴜ ᴘᴀᴄᴋ
+
+INFO:
+
+- ᴛʜɪs ʙᴏᴛ ᴀʟʟᴏᴡs ᴜsᴇʀs ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ ɪᴅ ᴏʀ ᴛʜᴇ ɪᴍᴀɢᴇ ᴏғ ᴀɴʏ sᴛɪᴄᴋᴇʀ ᴛʜᴀᴛ ɪs ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ᴀɴᴅ ᴀʟsᴏ ᴀʟʟᴏᴡs ᴜsᴇʀs ᴛᴏ ᴋᴀɴɢ ᴀɴʏ sᴛɪᴄᴋᴇʀ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ᴀᴅᴅ ɪᴛ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ.
+"""
+buttons_stk = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^stk$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_stk,
+        reply_markup=InlineKeyboardMarkup(buttons_stk),
+        disable_web_page_preview=True,
+    )
+
+text_trt = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tʀᴜᴛʜ:
+
+ᴛʀᴜᴛʜ ᴏʀ ᴅᴀʀᴇ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs
+
+ᴜsᴇ ᴛʜᴇsᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴘʟᴀʏ ᴛʀᴜᴛʜ ᴏʀ ᴅᴀʀᴇ:
+
+々 /truth: ɢᴇᴛ ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ ǫᴜᴇsᴛɪᴏɴ. ᴀɴsᴡᴇʀ ʜᴏɴᴇsᴛʟʏ!
+々 /dare: ɢᴇᴛ ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ ᴄʜᴀʟʟᴇɴɢᴇ. ᴄᴏᴍᴘʟᴇᴛᴇ ɪᴛ ɪғ ʏᴏᴜ ᴅᴀʀᴇ!
+
+ᴇxᴀᴍᴘʟᴇs:
+々 /truth: "ᴡʜᴀᴛ ɪs ʏᴏᴜʀ ᴍᴏsᴛ ᴇᴍʙᴀʀʀᴀssɪɴɢ ᴍᴏᴍᴇɴᴛ?"
+々 /dare: "ᴅᴏ 10 ᴘᴜsʜ-ᴜᴘs."
+
+ɴᴏᴛᴇ:
+ɪғ ʏᴏᴜ ᴇɴᴄᴏᴜɴᴛᴇʀ ᴀɴʏ ɪssᴜᴇs ᴡɪᴛʜ ғᴇᴛᴄʜɪɴɢ ǫᴜᴇsᴛɪᴏɴs, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ.
+"""
+buttons_trt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^trt$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_trt,
+        reply_markup=InlineKeyboardMarkup(buttons_trt),
+        disable_web_page_preview=True,
+    )
+
+text_tgl = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tᴀɢᴀʟʟ:
+
+
+@all ᴏʀ /all | /tagall ᴏʀ  @tagall | /mentionall ᴏʀ  @mentionall [ᴛᴇxᴛ] ᴏʀ [ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ] ᴛᴏ ᴛᴀɢ ᴀʟʟ ᴜsᴇʀ's ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʙᴛ ʙᴏᴛ
+
+々 /admins | @admins | /report [ᴛᴇxᴛ] ᴏʀ [ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ] ᴛᴏ ᴛᴀɢ ᴀʟʟ ᴀᴅᴍɪɴ's ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ
+
+々 /cancel Oʀ @cancel |  /offmention Oʀ @offmention | /mentionoff Oʀ @mentionoff | /cancelall Oʀ @cancelall - ᴛᴏ sᴛᴏᴘ ʀᴜɴɴɪɴɢ ᴀɴʏ ᴛᴀɢ ᴘʀᴏᴄᴇss
+
+Nᴏᴛᴇ Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ᴜsᴇ ᴛʜᴇ Aᴅᴍɪɴs ᴏғ Cʜᴀᴛ ᴀɴᴅ ᴍᴀᴋᴇ Sᴜʀᴇ Bᴏᴛ ᴀɴᴅ ᴀssɪsᴛᴀɴᴛ ɪs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ's
+"""
+buttons_tgl = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^tgl$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_tgl,
+        reply_markup=InlineKeyboardMarkup(buttons_tgl),
+        disable_web_page_preview=True,
+    )
+
+text_tgr = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tᴇʟᴇɢʀᴀᴘʜ:
+
+ᴛᴇʟᴇɢʀᴀᴘʜ ᴜᴘʟᴏᴀᴅ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs
+
+ᴜsᴇ ᴛʜᴇsᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜᴘʟᴏᴀᴅ ᴍᴇᴅɪᴀ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴘʜ:
+
+々 /tgm: ᴜᴘʟᴏᴀᴅ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴘʜ.
+々 /tgt: sᴀᴍᴇ ᴀs /tgm.
+々 /telegraph: sᴀᴍᴇ ᴀs /tgm.
+々 /tl: sᴀᴍᴇ ᴀs /tgm.
+
+ᴇxᴀᴍᴘʟᴇ:
+- ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴠɪᴅᴇᴏ ᴡɪᴛʜ /tgm ᴛᴏ ᴜᴘʟᴏᴀᴅ ɪᴛ.
+
+ɴᴏᴛᴇ:
+ʏᴏᴜ ᴍᴜsᴛ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇᴅɪᴀ ғɪʟᴇ ғᴏʀ ᴛʜᴇ ᴜᴘʟᴏᴀᴅ ᴛᴏ ᴡᴏʀᴋ.
+"""
+buttons_tgr = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^tgr$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_tgr,
+        reply_markup=InlineKeyboardMarkup(buttons_tgr),
+        disable_web_page_preview=True,
+    )
+
+text_tt = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tᴛs:
+
+ᴛᴇxᴛ ᴛᴏ sᴘᴇᴇᴄʜ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅ
+
+ᴜsᴇ ᴛʜᴇ /tts ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ᴛᴇxᴛ ɪɴᴛᴏ sᴘᴇᴇᴄʜ.
+
+々 /tts <ᴛᴇxᴛ>: ᴄᴏɴᴠᴇʀᴛs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴛᴏ sᴘᴇᴇᴄʜ ɪɴ ʜɪɴᴅɪ.
+
+ᴇxᴀᴍᴘʟᴇ:
+々 /tts Namaste Duniya
+
+ɴᴏᴛᴇ:
+ᴍᴀᴋᴇ sᴜʀᴇ ᴛᴏ ᴘʀᴏᴠɪᴅᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴀғᴛᴇʀ ᴛʜᴇ /tts ᴄᴏᴍᴍᴀɴᴅ.
+"""
+buttons_tt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^tt$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_tt,
+        reply_markup=InlineKeyboardMarkup(buttons_tt),
         disable_web_page_preview=True,
     )
