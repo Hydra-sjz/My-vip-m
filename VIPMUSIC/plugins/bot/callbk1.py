@@ -233,9 +233,9 @@ BUTTONS_HP5 = [
         InlineKeyboardButton("...", callback_data=""),
     ],
     [
-        InlineKeyboardButton("...", callback_data=""),
-        InlineKeyboardButton("...", callback_data=""),
-        InlineKeyboardButton("...", callback_data=""),
+        InlineKeyboardButton("...", callback_data="f"),
+        InlineKeyboardButton("...", callback_data="d"),
+        InlineKeyboardButton("...", callback_data="d"),
     ],
     [
         InlineKeyboardButton("❮", callback_data="settings4"),
