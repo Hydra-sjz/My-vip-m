@@ -195,6 +195,7 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 text_sl = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Sʟᴀᴘ:
 
@@ -207,6 +208,8 @@ buttons_sl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^sl$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -214,6 +217,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_sl),
         disable_web_page_preview=True,
     )
+
 
 text_stk = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Sᴛɪᴄᴋᴇʀ:
@@ -234,6 +238,8 @@ buttons_stk = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^stk$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -241,6 +247,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_stk),
         disable_web_page_preview=True,
     )
+
 
 text_trt = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tʀᴜᴛʜ:
@@ -265,6 +272,8 @@ buttons_trt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^trt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -272,6 +281,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_trt),
         disable_web_page_preview=True,
     )
+
 
 text_tgl = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tᴀɢᴀʟʟ:
@@ -291,6 +301,8 @@ buttons_tgl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^tgl$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -298,6 +310,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_tgl),
         disable_web_page_preview=True,
     )
+
 
 text_tgr = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tᴇʟᴇɢʀᴀᴘʜ:
@@ -323,6 +336,8 @@ buttons_tgr = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^tgr$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -330,6 +345,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_tgr),
         disable_web_page_preview=True,
     )
+
 
 text_tt = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Tᴛs:
@@ -352,6 +368,8 @@ buttons_tt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^tt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
